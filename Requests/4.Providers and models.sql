@@ -1,0 +1,4 @@
+select providers.name_firm, providers_has_models.providers_id_firm, count(providers_has_models.models_id_model) as количество_предлагаемых_авто
+from providers_has_models join providers on providers_has_models.providers_id_firm = providers.id
+group by providers_has_models.providers_id_firm
+order by providers_has_models.providers_id_firm
